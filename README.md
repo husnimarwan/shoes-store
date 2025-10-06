@@ -4,8 +4,8 @@ A simple and modern eCommerce store for shoes, built with React and Vite.
 
 ## Screenshots
 
-![Screenshot 1](screenshotMainPage.png.png)
-![Screenshot 2](screenshotCartPage.png.png)
+![Screenshot 1](screenshotMainPage.png)
+![Screenshot 2](screenshotCartPage.png)
 
 
 ## Features

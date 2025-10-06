@@ -14,7 +14,7 @@ const Navigation = () => {
         <ul className="nav-menu">
           <li className="nav-item">
             <Link to="/cart" className="nav-link cart-link">
-              Cart 
+              🛒
               {cart.items.length > 0 && (
                 <span className="cart-count">{cart.items.length}</span>
               )}

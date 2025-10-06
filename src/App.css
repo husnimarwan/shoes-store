@@ -87,6 +87,11 @@ body {
   box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.1);
 }
 
+.search-container input::placeholder {
+  color: var(--subtle-text-color);
+  opacity: 1; /* Firefox */
+}
+
 .nav-menu {
   display: flex;
   list-style: none;

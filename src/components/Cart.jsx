@@ -31,7 +31,6 @@ const Cart = () => {
                 <div className="quantity-controls">
                   <button 
                     onClick={() => updateQuantity(item.id, item.quantity - 1)}
-                    disabled={item.quantity <= 1}
                   >
                     -
                   </button>

@@ -11,6 +11,9 @@ const Navigation = () => {
         <Link to="/" className="nav-logo">
           <h1>Snickers</h1>
         </Link>
+        <div className="search-container">
+          <input type="search" placeholder="Search for products..." />
+        </div>
         <ul className="nav-menu">
           <li className="nav-item">
             <Link to="/cart" className="nav-link cart-link">

@@ -59,6 +59,9 @@ const ProductCatalog = () => {
   return (
     <div className="product-catalog">
       <h2>Featured Snickers</h2>
+      <p className="catalog-description">
+        Explore our handpicked selection of premium snickers, crafted for style, comfort, and durability.
+      </p>
       <div className="products-grid">
         {products.map(product => (
           <ProductCard 

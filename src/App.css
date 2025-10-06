@@ -49,12 +49,35 @@ body {
 }
 
 .nav-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
   max-width: 1400px;
   margin: 0 auto;
+}
+
+.nav-logo {
+  flex-shrink: 0;
+}
+
+.search-container {
+  flex-grow: 1;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 2rem; /* Add gap between nav items */
+  justify-content: center;
+}
+
+.nav-menu {
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .nav-container {
+    justify-content: space-between;
+  }
+
+  .search-container {
+    flex-grow: 0; /* Don't grow on mobile */
+  }
 }
 
 .nav-logo h1 {
@@ -90,6 +113,62 @@ body {
 .search-container input::placeholder {
   color: var(--subtle-text-color);
   opacity: 1; /* Firefox */
+}
+
+/* Search bar responsive */
+
+.search-icon-label {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .nav-container {
+    justify-content: space-between;
+  }
+
+  .search-container {
+    flex-grow: 0; /* Don't grow on mobile */
+  }
+
+  .search-icon-label {
+    display: block;
+    cursor: pointer;
+  }
+
+  .search-container input {
+    width: 0;
+    opacity: 0;
+    padding: 0;
+    border: none;
+  }
+
+  .search-container:focus-within {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: var(--card-background);
+    display: flex;
+    align-items: center;
+    padding: 1rem; /* Add padding */
+  }
+
+  .search-container:focus-within input {
+    width: 100%;
+    opacity: 1;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border-color);
+  }
+
+  .search-container:focus-within .search-icon-label {
+    display: none; /* Hide the icon when the search bar is open */
+  }
+
+  .nav-container:focus-within .nav-logo,
+  .nav-container:focus-within .nav-menu {
+    display: none; /* Hide logo and cart when search is open */
+  }
 }
 
 .nav-menu {
@@ -308,6 +387,9 @@ body {
   font-size: 1.2rem;
   color: var(--subtle-text-color);
   transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .quantity-controls button:hover {

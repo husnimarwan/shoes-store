@@ -121,6 +121,10 @@ body {
   display: none;
 }
 
+.close-search-btn {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .nav-container {
     justify-content: space-between;
@@ -143,15 +147,16 @@ body {
   }
 
   .search-container:focus-within {
-    position: absolute;
+    position: fixed;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
-    background: var(--card-background);
+    background: rgba(255, 255, 255, 0.98);
+    z-index: 101;
     display: flex;
     align-items: center;
-    padding: 1rem; /* Add padding */
+    padding: 1rem;
   }
 
   .search-container:focus-within input {
@@ -168,6 +173,20 @@ body {
   .nav-container:focus-within .nav-logo,
   .nav-container:focus-within .nav-menu {
     display: none; /* Hide logo and cart when search is open */
+  }
+
+  .close-search-btn {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 102;
+  }
+
+  .search-container:focus-within .close-search-btn {
+    display: block;
   }
 }
 
